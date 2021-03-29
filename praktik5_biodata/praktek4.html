@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Praktek 4 | Ringgo</title>
+
+    <style>
+        body{
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .square{
+            width: 100%;
+            height: 150px;
+            background-color: yellow;
+        }
+    </style>
+  </head>
+  <body>
+      
+    <h1>Praktek 4 | Ringgo</h1>
+    <hr>
+
+    <section id="sub1">
+        <div class="container">
+
+            <!-- Task 1 -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Sub Tugas 1</h5>
+                        </div>
+                        <div class="card-body">
+                            <button class="btn btn-info" id="show-gambar">Tampilkan</button>
+                            <button class="btn btn-danger" id="hide-gambar">Sembunyikan</button>
+                            <hr>
+                            <img src="https://lumiere-a.akamaihd.net/v1/images/avenger-endgame-emeagrid-m_f0276e21.jpeg?region=0,0,800,600" class="w-100" id="img-showing">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task 2 -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mt-4">
+                        <div class="card-header">
+                            <h5>Sub Tugas 2</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="square"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task 3 -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mt-4">
+                        <div class="card-header">
+                            <h5>Sub Tugas 3</h5>
+                        </div>
+                        <div class="card-body">
+                            <button class="btn btn-info" id="fadein-gambar">Tampilkan</button>
+                            <button class="btn btn-danger" id="fadeout-gambar">Sembunyikan</button>
+                            <hr>
+                            <div class="square" id="square-fade"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </section>
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Sub 1 -->
+    <script>
+        // Menampilkan gambar
+        $('#show-gambar').click(function(){
+            $('#img-showing').show();
+        });
+        // Menyembunyikan gambar
+        $('#hide-gambar').click(function(){
+            $('#img-showing').hide();
+        });
+    </script>
+
+    <!-- Sub 2 -->
+    <script>
+        $('.square').dblclick(function(){
+            $(this).css('backgroundColor', 'red');
+        });
+    </script>
+
+    <!-- Sub 3 -->
+    <script>
+        // Menampilkan gambar
+        $('#fadein-gambar').click(function(){
+            $('#square-fade').fadeIn();
+        });
+        // Menyembunyikan gambar
+        $('#fadeout-gambar').click(function(){
+            $('#square-fade').fadeOut();
+        });
+    </script>
+  </body>
+</html>
